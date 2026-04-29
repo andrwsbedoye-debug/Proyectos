@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-brand-black: #0a0a0a;
+  --color-brand-gold: #C5A022;
+  --color-brand-red: #7f1d1d;
+  --color-brand-dark: #450a0a;
+  --color-brand-white: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-black tracking-tighter uppercase italic;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C5A022 0%, #ecd399 50%, #C5A022 100%);
+}
+
+.red-gradient {
+  background: linear-gradient(135deg, #7f1d1d 0%, #b22222 100%);
+}
+
+.sidebar-gradient {
+  background: linear-gradient(to bottom, #7f1d1d 0%, #450a0a 50%, #0a0a0a 100%);
+}
+
+.skew-badge {
+  @apply transform skew-x-[-15deg] px-4 py-1 font-black uppercase tracking-tighter text-[10px];
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 34, 0.1);
+}
+
+.grid-dot-pattern {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGgydjJoLTJ6TTIgMmgydjJoLTJ6IiBmaWxsPSIjYTVhNWE1IiBmaWxsLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=");
+}
